@@ -1,6 +1,7 @@
 package simarray
 
 import (
+	"reflect"
 	"testing"
 )
 
@@ -11,7 +12,26 @@ func Test_NewSimArray_success(t *testing.T) {
 		t.Fail()
 	}
 
-	for _,value := range array.array
+	if !reflect.DeepEqual(array.array.ToArray(), src) {
+		t.Fail()
+	}
+}
+
+func Test_SimArray_Contains(t *testing.T) {
+	src := []string{"1111", "2222"}
+	array, err := NewSimArray(src)
+	if err != nil {
+		t.Fail()
+	}
+	if !array.Contains("1111") {
+		t.Fail()
+	}
+	if array.Contains(1111) {
+		t.Fail()
+	}
+	if array.Contains("3333") {
+		t.Fail()
+	}
 }
 
 // func Test_ArrayContainsByRefelct(t *testing.T) {
