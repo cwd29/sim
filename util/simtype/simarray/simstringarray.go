@@ -1,19 +1,34 @@
 package simarray
 
-type SimStringArray struct {
+import "reflect"
+
+type simStringArray struct {
 	array []string
 }
 
-func (array *SimStringArray) New(src interface{}) {
+func (array *simStringArray) Src(src interface{}) {
 	array.array = src.([]string)
 }
 
-func (array *SimStringArray) Len() int {
+func (array *simStringArray) Len() int {
 	return len(array.array)
 }
 
-func (array *SimStringArray) ToArray() interface{} {
+func (array *simStringArray) ToArray() interface{} {
 	return array.array
+}
+
+func (array *simStringArray) Contains(cnt interface{}) bool {
+	if reflect.ValueOf(cnt).Kind() != reflect.String {
+		return false
+	}
+	ncnt := cnt.(string)
+	for _, value := range array.array {
+		if value == ncnt {
+			return true
+		}
+	}
+	return false
 }
 
 // // SimStringArray is 自定义的string数组类型
