@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_NewSimArray_success(t *testing.T) {
+func Test_SimArray_NewSimArray(t *testing.T) {
 	src := []string{"1", "2"}
 	array, err := NewSimArray(src)
 	if err != nil {
@@ -31,6 +31,26 @@ func Test_SimArray_Contains(t *testing.T) {
 	}
 	if array.Contains("3333") {
 		t.Fail()
+	}
+}
+
+func Test_SimStringArray_ContainsAny(t *testing.T) {
+	h1 := "go say hello world"
+	h2 := "csharp say hello world"
+	src := []string{h1, h2, "go say ok", "csharp say ok"}
+	array, err := NewSimArray(src)
+	if err != nil {
+		t.Fail()
+	}
+	result := array.ContainsAny("hello world")
+	if len(result) != 2 {
+		t.Fail()
+	}
+
+	for _, data := range result {
+		if h1 != data && h2 != data {
+			t.Fail()
+		}
 	}
 }
 

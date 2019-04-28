@@ -3,6 +3,7 @@ package simarray
 import (
 	"errors"
 	"reflect"
+	"strings"
 )
 
 // SimArray is 指定以的数组类型
@@ -39,6 +40,16 @@ func NewSimArray(src interface{}) (array *SimArray, err error) {
 // Contains is 数组中是否包含某个元素
 func (array *SimArray) Contains(cnt interface{}) bool {
 	return array.array.Contains(cnt)
+}
+
+// ContainsAny is 数组中的元素包含sub的一部分的列表
+func (array *SimArray) ContainsAny(sub string) (result []string) {
+	for _, value := range array.array.ToArray().([]string) {
+		if strings.Contains(value, sub) {
+			result = append(result, value)
+		}
+	}
+	return
 }
 
 // // ArrayContainsByRefelct is 用于比较一个数组中是否包含一个元素
