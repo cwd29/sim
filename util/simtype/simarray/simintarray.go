@@ -1,10 +1,12 @@
 package simarray
 
+import "reflect"
+
 type simIntArray struct {
 	array []int
 }
 
-func (array *simIntArray) New(src interface{}) {
+func (array *simIntArray) Src(src interface{}) {
 	array.array = src.([]int)
 }
 
@@ -14,6 +16,20 @@ func (array *simIntArray) Len() int {
 
 func (array *simIntArray) ToArray() interface{} {
 	return array.array
+}
+
+func (array *simIntArray) Contains(cnt interface{}) bool {
+	if reflect.ValueOf(cnt).Kind() != reflect.Int {
+		return false
+	}
+
+	ncnt := cnt.(int)
+	for _, value := range array.array {
+		if value == ncnt {
+			return true
+		}
+	}
+	return false
 }
 
 // // SimIntArray is 自定的int数组类型
