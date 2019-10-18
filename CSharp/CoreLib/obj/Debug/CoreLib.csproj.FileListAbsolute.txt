@@ -1,0 +1,5 @@
+D:\workspace\src\github-cwd\sim\CoreLib\obj\Debug\CoreLib.csproj.CoreCompileInputs.cache
+D:\workspace\src\github-cwd\sim\Output\Debug\CoreLib.dll
+D:\workspace\src\github-cwd\sim\Output\Debug\CoreLib.pdb
+D:\workspace\src\github-cwd\sim\CoreLib\obj\Debug\CoreLib.dll
+D:\workspace\src\github-cwd\sim\CoreLib\obj\Debug\CoreLib.pdb

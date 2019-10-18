@@ -1,0 +1,9 @@
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\bin\Debug\CoreLib.Tests.dll
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\bin\Debug\CoreLib.Tests.pdb
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\obj\Debug\CoreLib.Tests.csproj.CoreCompileInputs.cache
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\obj\Debug\CoreLib.Tests.dll
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\obj\Debug\CoreLib.Tests.pdb
+D:\workspace\src\github-cwd\sim\Output\Tests\CoreLib.Tests.dll
+D:\workspace\src\github-cwd\sim\Output\Tests\CoreLib.Tests.pdb
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\obj\Debug\CoreLib.Tests.csprojAssemblyReference.cache
+D:\workspace\src\github-cwd\sim\CoreLib.Tests\obj\Debug\CoreLib.Tests.csproj.CopyComplete

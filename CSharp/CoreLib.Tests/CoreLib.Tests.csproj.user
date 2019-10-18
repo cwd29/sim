@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>D:\workspace\src\github-cwd\sim\ThirdPartyLib\;D:\workspace\src\github-cwd\sim\Output\Debug\</ReferencePath>
+  </PropertyGroup>
+</Project>
